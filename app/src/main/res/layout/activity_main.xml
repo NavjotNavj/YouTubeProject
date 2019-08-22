@@ -7,7 +7,6 @@
     android:background="#fff"
     tools:context=".MainActivity">
 
-
     <view
         android:id="@+id/youtubePlayer"
         class="com.google.android.youtube.player.YouTubePlayerView"
@@ -27,32 +26,23 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="250dp"
         android:id="@+id/linear1"
-
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="#fff"
+                android:background="@drawable/button_shape"
                 android:id="@+id/likebtn"
                 android:src="@drawable/like" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="likes"
-                android:layout_marginLeft="10dp"
-                android:padding="5dp"
-                android:id="@+id/liketv"
-                android:textColor="#000"
-                android:textSize="17sp" />
+
 
 
         </LinearLayout>
@@ -61,36 +51,55 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/linear1"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
             android:orientation="vertical">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fff"
+                android:background="@drawable/button_shape"
                 android:id="@+id/dislikebtn"
                 android:src="@drawable/dislike" />
 
-            <TextView
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/linear1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SUBSCRIBE"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:padding="5dp"
+                android:text="FOLLOW"
+                android:textColor="#E71C23"
+                android:layout_marginLeft="40dp"
+                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/sharebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Dislikes "
-                android:padding="5dp"
-                android:id="@+id/disliketv"
-                android:textColor="#000"
-                android:textSize="17sp" />
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:background="#fff"
+                android:src="@drawable/share" />
 
 
         </LinearLayout>
-
     </LinearLayout>
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.7dp"
-        android:layout_marginLeft="15dp"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
         android:layout_below="@id/linear1"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="2dp"
         android:layout_marginBottom="5dp"
         android:background="@color/cardview_dark_background" />
 
@@ -113,7 +122,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comments"
+                android:text="Comment:"
                 android:padding="5dp"
                 android:textColor="#000"
                 android:textSize="19sp"
@@ -128,51 +137,48 @@
             android:layout_marginLeft="20dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                android:orientation="vertical">
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Name:"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="17sp" />-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Name:"
-                    android:textColor="#000"
-                    android:textSize="17sp" />
-
-                <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Add name here"
-                    android:id="@+id/userName"
-                    android:textColor="#000"
-                    android:textSize="17sp" />
-
-
-            </LinearLayout>
+                <!--<EditText-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="Add name here"-->
+                    <!--android:id="@+id/userName"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="17sp"-->
+                    <!--android:inputType="textCapSentences" />-->
+            <!--</LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Comment:"
-                    android:textColor="#000"
-                    android:textSize="17sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Comment:"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="17sp" />-->
 
                 <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:hint="add your comment"
-                    android:textColor="#000"
                     android:id="@+id/uercomment"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="add a public comment"
+                    android:inputType="textCapSentences"
+                    android:textColor="#000"
                     android:textSize="17sp" />
-
-
             </LinearLayout>
 
         </LinearLayout>
@@ -182,16 +188,17 @@
             android:layout_height="wrap_content"
             android:src="@drawable/sendbtn"
             android:layout_gravity="center"
-            android:background="#fff"
+            android:background="@drawable/button_shape"
             android:id="@+id/sendbtn"
             android:layout_marginLeft="30dp"/>
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.7dp"
-        android:layout_marginLeft="15dp"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="2dp"
         android:layout_below="@id/linear2"
         android:layout_marginBottom="5dp"
         android:background="@color/cardview_dark_background" />
@@ -201,11 +208,8 @@
     android:layout_height="match_parent"
     android:layout_below="@id/linear2"
     android:id="@+id/recyclerView"
-    android:layout_marginTop="10dp"
-    android:padding="2dp">
-
+    android:layout_marginTop="10dp">
 
 </androidx.recyclerview.widget.RecyclerView>
-
 
 </RelativeLayout>
